@@ -34,15 +34,15 @@ ClapTrap::~ClapTrap(void) {
 }
 
 bool ClapTrap::canAct(void) const {
+  if (_hitPoints == 0) {
+    std::cout << "ClapTrap " << _name
+              << " cannot act because it has no hit points left." << std::endl;
+    return false;
+  }
   if (_energyPoints == 0) {
     std::cout << "ClapTrap " << _name
               << " cannot act because it has no energy points left."
               << std::endl;
-    return false;
-  }
-  if (_hitPoints == 0) {
-    std::cout << "ClapTrap " << _name
-              << " cannot act because it has no hit points left." << std::endl;
     return false;
   }
   return true;
