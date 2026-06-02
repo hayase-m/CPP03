@@ -1,5 +1,5 @@
 #ifndef DIAMONDTRAP_HPP
-#define DIAMONTTRAP_HPP
+#define DIAMONDTRAP_HPP
 
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
