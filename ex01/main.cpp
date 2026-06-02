@@ -1,22 +1,25 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void) {
-  ClapTrap robot("Bob");
+  ScavTrap guard("Gatekeeper");
 
-  robot.attack("target");
-  robot.takeDamage(4);
-  robot.beRepaired(3);
-  robot.takeDamage(100);
-  robot.attack("target after defeat");
-  robot.beRepaired(1);
-  robot.takeDamage(1);
+  guard.attack("target");
+  guard.takeDamage(30);
+  guard.beRepaired(10);
+  guard.guardGate();
 
-  ClapTrap tired("Tired");
+  ScavTrap copy(guard);
+  copy.attack("copy target");
 
-  for (int i = 0; i < 10; i++)
+  ScavTrap assigned("Assigned");
+  assigned = guard;
+  assigned.guardGate();
+
+  ScavTrap tired("Tired");
+
+  for (int i = 0; i < 50; i++)
     tired.attack("training target");
   tired.attack("target without energy");
-  tired.beRepaired(1);
 
   return 0;
 }

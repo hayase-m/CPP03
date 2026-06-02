@@ -4,13 +4,15 @@
 #include <string>
 
 class ClapTrap {
-private:
+protected:
   std::string _name;
   unsigned int _hitPoints;
   unsigned int _energyPoints;
   unsigned int _attackDamage;
 
-  bool canAct(void) const;
+  bool canAct(const std::string &type) const;
+  ClapTrap(std::string name, unsigned int hitPoints, unsigned int energyPoints,
+           unsigned int attackDamage);
 
 public:
   ClapTrap(void);

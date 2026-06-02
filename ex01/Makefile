@@ -1,9 +1,9 @@
-NAME = claptrap
+NAME = scavtrap
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic -MMD -MP
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJDIR = objs
 OBJS = $(SRCS:%.cpp=$(OBJDIR)/%.o)
