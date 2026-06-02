@@ -1,24 +1,24 @@
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main(void) {
-  ScavTrap scav("Scavy");
-  FragTrap frag("Fraggy");
+  DiamondTrap diamond("Diamond");
 
-  scav.attack("target");
-  scav.guardGate();
+  diamond.whoAmI();
+  diamond.attack("target");
+  diamond.takeDamage(40);
+  diamond.beRepaired(10);
+  diamond.guardGate();
+  diamond.highFivesGuys();
 
-  frag.attack("target");
-  frag.takeDamage(40);
-  frag.beRepaired(10);
-  frag.highFivesGuys();
+  DiamondTrap copy(diamond);
+  copy.whoAmI();
 
-  FragTrap copy(frag);
-  copy.highFivesGuys();
+  DiamondTrap assigned("Assigned");
+  assigned = diamond;
+  assigned.whoAmI();
 
-  FragTrap assigned("Assigned");
-  assigned = frag;
-  assigned.highFivesGuys();
+  DiamondTrap empty;
+  empty.whoAmI();
 
   return 0;
 }
