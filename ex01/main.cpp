@@ -20,6 +20,7 @@ int main(void) {
   for (int i = 0; i < 50; i++)
     tired.attack("training target");
   tired.attack("target without energy");
+  tired.beRepaired(1);
 
   return 0;
 }
