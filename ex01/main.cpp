@@ -1,0 +1,22 @@
+#include "ClapTrap.hpp"
+
+int main(void) {
+  ClapTrap robot("Bob");
+
+  robot.attack("target");
+  robot.takeDamage(4);
+  robot.beRepaired(3);
+  robot.takeDamage(100);
+  robot.attack("target after defeat");
+  robot.beRepaired(1);
+  robot.takeDamage(1);
+
+  ClapTrap tired("Tired");
+
+  for (int i = 0; i < 10; i++)
+    tired.attack("training target");
+  tired.attack("target without energy");
+  tired.beRepaired(1);
+
+  return 0;
+}
