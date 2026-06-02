@@ -11,5 +11,12 @@ int main(void) {
   robot.beRepaired(1);
   robot.takeDamage(1);
 
+  ClapTrap tired("Tired");
+
+  for (int i = 0; i < 10; i++)
+    tired.attack("training target");
+  tired.attack("target without energy");
+  tired.beRepaired(1);
+
   return 0;
 }
